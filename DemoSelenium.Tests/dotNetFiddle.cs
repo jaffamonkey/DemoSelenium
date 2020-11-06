@@ -19,7 +19,10 @@ namespace DemoSelenium.Tests
         public string RunButton => _driver.FindElement(By.Id("run-button"));
         public string SaveButton => _driver.FindElement(By.ClassName("save-button"));
         public string ShareButton => _driver.FindElement(By.Id("Share"));
+        public string ShareButton => _driver.FindElement(By.Id("ShareLink"));
         public string NewPackageField => _driver.FindElement(By.ClassName("new-package"));
+        public string Username => _driver.FindElement(By.Id("Email"));
+        public string Password => _driver.FindElement(By.Id("Password"));
         public string HideShowSideOptions => _driver.FindElement(By.ClassName("btn-sidebar-toggle"));
         public string GettingStartedButton => _driver.FindElement(By.ClassName("btn-default"));
         public string RunOutputValidator => _driver.FindElement(By.Id("output")).Text;
