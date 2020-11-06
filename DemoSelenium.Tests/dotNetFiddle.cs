@@ -16,11 +16,11 @@ namespace DemoSelenium.Tests
 
         public string Title => _driver.Title;
         public string Source => _driver.PageSource;
-        public string UsernameValidator => _driver.FindElement(By.Id("username_validator")).Text;
-        public string PasswordValidator => _driver.FindElement(By.Id("password_validator")).Text;
+        public string RunButton => _driver.FindElement(By.Id("run-button"));
+        public string RunOutputValidator => _driver.FindElement(By.Id("output")).Text;
         public string PhoneValidator => _driver.FindElement(By.Id("phone_validator")).Text;
 
-        private const string URI = "https://localhost:44331/Home/Register";
+        private const string URI = "https://dotnetfiddle.net";
 
         private IWebElement UsernameElement => _driver.FindElement(By.Id("username"));
         private IWebElement PasswordElement => _driver.FindElement(By.Id("password"));
