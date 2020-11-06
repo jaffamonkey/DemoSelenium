@@ -17,9 +17,14 @@ namespace DemoSelenium.Tests
         public string Title => _driver.Title;
         public string Source => _driver.PageSource;
         public string RunButton => _driver.FindElement(By.Id("run-button"));
+        public string SaveButton => _driver.FindElement(By.ClassName("save-button"));
+        public string ShareButton => _driver.FindElement(By.Id("Share"));
+        public string NewPackageField => _driver.FindElement(By.ClassName("new-package"));
+        public string HideShowSideOptions => _driver.FindElement(By.ClassName("btn-sidebar-toggle"));
+        public string GettingStartedButton => _driver.FindElement(By.ClassName("btn-default"));
         public string RunOutputValidator => _driver.FindElement(By.Id("output")).Text;
-        public string PhoneValidator => _driver.FindElement(By.Id("phone_validator")).Text;
-
+        public string PackageIncludedTick => _driver.FindElement(By.XPath("//*[@id=\"menu\"]/li[1]/ul/li[1]/a/i"));
+        
         private const string URI = "https://dotnetfiddle.net";
 
         private IWebElement UsernameElement => _driver.FindElement(By.Id("username"));
